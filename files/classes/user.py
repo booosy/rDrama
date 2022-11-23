@@ -1003,7 +1003,7 @@ class User(Base):
 	def can_see_chudrama(self):
 		if self.admin_level >= PERMS['VIEW_CHUDRAMA']: return True
 		if self.client: return True
-		if self.truescore >= 5000: return True
+		if self.truescore >= 1: return True
 		if self.agendaposter: return True
 		if self.patron: return True
 		return False
